@@ -1,9 +1,5 @@
 use actix_web::{web, App, HttpResponse, HttpServer, Responder};
 
-async fn ping() -> impl Responder {
-    HttpResponse::Ok().body("pong")
-}
-
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
@@ -18,4 +14,8 @@ async fn main() -> std::io::Result<()> {
 
 async fn health() -> impl Responder {
     HttpResponse::Ok().body("health")
+}
+
+async fn ping() -> impl Responder {
+    HttpResponse::Ok().body("pong")
 }
