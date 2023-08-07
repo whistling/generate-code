@@ -1,5 +1,5 @@
-# Use the official Rust nightly image as the build environment
-FROM rustlang/rust:nightly as builder
+# Use the official Rust image as the build environment
+FROM rustlang/rust:1.54.0 as builder
 
 # Create a new empty shell project
 RUN USER=root cargo new --bin generate-code
